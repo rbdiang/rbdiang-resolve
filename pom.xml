@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.10</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>rbdiang.resolve</groupId>
+    <artifactId>rbdiang-resolve</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <properties>
+        <java.version>17</java.version>
+        <grpc-spring-boot-starter.version>5.0.0</grpc-spring-boot-starter.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-java</artifactId>
+                <version>3.22.2</version>
+            </dependency>
+            <dependency>
+                <groupId>rbdiang.resolve</groupId>
+                <artifactId>rbdiang-resolve-backend</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>rbdiang.resolve</groupId>
+                <artifactId>rbdiang-resolve-client</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>rbdiang.resolve</groupId>
+                <artifactId>rbdiang-resolve-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>rbdiang.resolve</groupId>
+                <artifactId>rbdiang-resolve-hazelcast</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>rbdiang.resolve</groupId>
+                <artifactId>rbdiang-resolve-grpc-cache</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>rbdiang.resolve</groupId>
+                <artifactId>rbdiang-resolve-gprc-hazelcast</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.lognet</groupId>
+                <artifactId>grpc-cliet-spring-boot-starter</artifactId>
+                <version>${grpc-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.lognet</groupId>
+                <artifactId>grpc-spring-boot-starter</artifactId>
+                <version>${grpc-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.lognet</groupId>
+                <artifactId>grpc-client-spring-boot-starter</artifactId>
+                <version>${grpc-spring-boot-starter.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+
+        </pluginManagement>
+    </build>
+
+    <modules>
+        <module>rbdiang-resolve-grpc-client</module>
+        <module>rbdiang-resolve-common</module>
+        <module>rbdiang-resolve-grpc-cache</module>
+        <module>rbdiang-resolve-grpc-hazelcast</module>
+        <module>rbdiang-resolve-backend</module>
+        <module>rbdiang-resolve-hazelcast</module>
+    </modules>
+</project>

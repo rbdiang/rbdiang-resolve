@@ -1,0 +1,9 @@
+spring:
+  hazelcast:
+    config: classpath:/hazelcast-in-memory.yaml
+grpc:
+  netty-server:
+    keep-alive-time: 30s
+    max-inbound-message-size: 10MB
+    primary-listen-address: 127.0.0.1:6565
+    on-collision-prefer-shaded-netty: false

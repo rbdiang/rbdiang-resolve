@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "rbdiang.resolve.gprc";
+
+package rbdiang.resolve.gprc;
+
+service ResolveService {
+  rpc ResolveGroup(GroupRequest) returns (GroupResponse);
+  rpc Normalize(NormalizeRequest) returns (NormalizeResponse);
+
+}
+
+message GroupRequest {
+  string id = 1;
+  GroupType type = 2;
+}
+enum GroupType {
+  type1 = 0;
+  type2 = 1;
+}
+message GroupResponse {
+  repeated IndividualEntityDTO individuals = 1;
+}
+message IndividualEntityDTO {
+  string dn = 1;
+  string issuerDn = 2;
+}
+
+message NormalizeRequest {
+  string raw = 1;
+}
+message NormalizeResponse {
+  string raw = 1;
+  string normalized = 2;
+}
+
