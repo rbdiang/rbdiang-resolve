@@ -17,6 +17,7 @@ public class ResolverClient {
     private final ManagedChannel managedChannel;
 
     public ResolverClient() {
+        log.info("Connecting to: 127.0.0.1:6565");
         managedChannel = ManagedChannelBuilder.forTarget("127.0.0.1:6565")
                 .usePlaintext()
                 .build();
@@ -29,13 +30,11 @@ public class ResolverClient {
         return normalResponse.getNormalized();
     }
 
+    @PreDestroy
     public void shutdown() {
         log.info("Shutting down channel");
         if(managedChannel != null) {
             managedChannel.shutdown();
         }
     }
-
-
-
 }
