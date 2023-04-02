@@ -13,8 +13,8 @@ A simple demonstration using grpc and spring boot cache abstraction.
 
 A list of the various modules are below
 
-| ---- | ---- | ---- |
 | Module Name | Description | status |
+| ---- | ---- | ---- |
 | rbdiang-resolve-backend | Contains backend resolver code common to redis or hazelcast | initial creation |
 | rbdiang-resolve-common | Contains resolve.proto and generates the gRPC base ResolveServiceGrpc and client stubs | initial with 1 rpc method, normalize |
 | rbdiang-resolve-grpc-cache | Contains the GrpcService that provides implementation for ResolveServiceGrpcImpl  | initial creation |
