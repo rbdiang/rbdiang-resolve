@@ -1,5 +1,5 @@
 # rbdiang-resolve
-[![Build master branch](https://github.com/rbdiang/rbdiang-resolve/workflows/Build%20master%20branch/badge.svg)](https://github.com/rbdiang/rbdiang-resolve/actions)
+![Build master branch](https://github.com/rbdiang/rbdiang-resolve/docs/actions/workflows/maven.yml/badge.svg)
 A simple demonstration using grpc and spring boot cache abstraction.
 
 ## Running application
