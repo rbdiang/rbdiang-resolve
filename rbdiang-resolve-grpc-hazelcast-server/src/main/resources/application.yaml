@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: rbdiang-resolve-grpc-hazelcast-server
+  hazelcast:
+    config: classpath:/hazelcast-in-memory.yaml
+grpc:
+  server:
+    port: 9898

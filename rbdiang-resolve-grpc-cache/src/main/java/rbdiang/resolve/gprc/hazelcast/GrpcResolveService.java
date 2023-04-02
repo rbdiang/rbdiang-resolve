@@ -3,7 +3,7 @@ package rbdiang.resolve.gprc.hazelcast;
 import io.grpc.stub.StreamObserver;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.lognet.springboot.grpc.GRpcService;
+import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.context.annotation.Import;
 import org.springframework.stereotype.Component;
 import rbdiang.resolve.api.Normalized;
@@ -12,7 +12,7 @@ import rbdiang.resolve.service.NormalizeService;
 
 @Slf4j
 @AllArgsConstructor
-@GRpcService (interceptors = LogInterceptor.class)
+@GrpcService(interceptors = LogInterceptor.class)
 @Import({
         NormalizeService.class
 })

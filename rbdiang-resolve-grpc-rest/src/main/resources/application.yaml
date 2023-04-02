@@ -7,3 +7,11 @@ spring:
       port: 35730
 server:
   port: 8081
+grpc:
+  client:
+    GLOBAL:
+      address: 'static://127.0.0.1:9898'
+    rbdiang-resolve-grpc-server:
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+      negotiationType: plaintext

@@ -7,15 +7,21 @@
         <artifactId>rbdiang-resolve</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>rbdiang-resolve-grpc-hazelcast</artifactId>
+    <artifactId>rbdiang-resolve-grpc-hazelcast-server</artifactId>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
         <dependency>
-            <groupId>rbdiang.resolve</groupId>
-            <artifactId>rbdiang-resolve-hazelcast</artifactId>
+            <groupId>com.hazelcast</groupId>
+            <artifactId>hazelcast</artifactId>
+            <version>${hazelcast.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hazelcast</groupId>
+            <artifactId>hazelcast-spring</artifactId>
+            <version>${hazelcast.version}</version>
         </dependency>
         <dependency>
             <groupId>rbdiang.resolve</groupId>

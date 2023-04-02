@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 import rbdiang.resolve.client.ResolverClient;
 
 import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -52,9 +51,4 @@ public class ResolverController {
         return answer;
     }
 
-    @PreDestroy
-    public void shutdown() {
-        log.info("Shutting down resolver client");
-        resolverClient.shutdown();
-    }
 }
