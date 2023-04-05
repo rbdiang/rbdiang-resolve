@@ -4,6 +4,7 @@ option java_multiple_files = true;
 option java_package = "rbdiang.resolve.gprc";
 
 package rbdiang.resolve.gprc;
+import "common_types.proto";
 
 service ResolveService {
   rpc ResolveGroup(GroupRequest) returns (GroupResponse);
@@ -15,16 +16,9 @@ message GroupRequest {
   string id = 1;
   GroupType type = 2;
 }
-enum GroupType {
-  type1 = 0;
-  type2 = 1;
-}
+
 message GroupResponse {
   repeated IndividualEntityDTO individuals = 1;
-}
-message IndividualEntityDTO {
-  string dn = 1;
-  string issuerDn = 2;
 }
 
 message NormalizeRequest {

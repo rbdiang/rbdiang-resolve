@@ -1,0 +1,19 @@
+// Contains common types used
+// by multiple rpc services or message
+//
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "rbdiang.resolve.gprc";
+
+package rbdiang.resolve.gprc;
+
+enum GroupType {
+  TYPE_1 = 0;
+  TYPE_2 = 1;
+}
+
+message IndividualEntityDTO {
+  string dn = 1;
+  string issuer_dn = 2;
+}
